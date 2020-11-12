@@ -1,5 +1,7 @@
-#DEBUGGER_TELEGRAM_ID = 1234567890
-#TOKEN = '198724728:aijdakdAJED992jD'
+import os
+
+DEBUGGER_TELEGRAM_ID = os.environ.get('DEBUGGER_TELEGRAM_ID')
+TOKEN = os.environ.get('TOKEN')
 
 command_list = { # keywords for commands (first must be the same)
     'profile': ['profile', 'prof', 'account'],
