@@ -1,0 +1,4 @@
+DateTime==4.3
+sqlite3==3.33.0
+requests==2.24.0
+pyTelegramBotAPI==3.7.3
