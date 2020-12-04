@@ -156,6 +156,7 @@ def covid_show(message, data):
     with sqlite3.connect('db.sqlite') as db:
         db_cursor = db.cursor()
         db_cursor.execute('UPDATE user_data SET last_query=? WHERE id=?', (data["country"], message.from_user.id))
+        db.commit()
 
 @bot.callback_query_handler(func=lambda message: str(message.data).startswith("update"))
 def update_covid_show(callback):
